@@ -7,7 +7,6 @@ import './navbar.css';
 
 import { themeActions } from '../../store/theme';
 
-import ColorModal from './ColorModal';
 import Routes from './Routes';
 
 import PersonalData from '../../Data/PersonalData';
@@ -17,9 +16,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
-  const changeColor = (newColor) => {
-    dispatch(themeActions.changeThemeColor(newColor));
-  };
 
   const mode = useSelector((state) => state.mode);
   useEffect(() => {
@@ -32,11 +28,9 @@ const Navbar = () => {
     }
   }, [mode]);
   const bgColor = useSelector((state) => state.theme.backgroundColor);
-  const activeColor = useSelector((state) => state.theme.color);
 
   // const [mode, setMode] = useState("light");
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
-  const [isColorModalShown, setColorModalShown] = useState(false);
 
   function handleModeChange() {
     const lightModeBtn = document.getElementById('lightModeBtn');
@@ -54,14 +48,12 @@ const Navbar = () => {
     }
   }
 
-  function handleColorSelector() {
-    setColorModalShown((prev) => !prev);
-  }
   function handleDropDown() {
     setIsDropDownVisible((prevValue) => {
       return !prevValue;
     });
   }
+
   function handleNavigate() {
     handleDropDown();
     menuRef.current.checked = false;
