@@ -7,7 +7,7 @@ import Button from '../UI/Button';
 import GetInTouch from '../Get In Touch/GetInTouch';
 import { useSelector } from 'react-redux';
 
-import ImageUrl from '../../Data/dp.png';
+import ImageUrl from '../../Data/dp.jpg';
 
 const AboutMe = () => {
   const uiColor = useSelector((state) => state.uiColor);
