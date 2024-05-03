@@ -8,7 +8,7 @@ const PersonalData = {
   aboutMe:
     'Hi Everyone, I am Manpreet Singh from Punjab, India. I am full stack developer. I am skilled in frontend technologies like HTML, CSS, JavaScript, jQuery, React, Bootstrap, Tailwind CSS and backend technologies like PHP, Laravel, CodeIgniter and databases like MySQL.',
   resumeLink:
-    'https://drive.google.com/file/d/1vfnzDcN4uATaNZ7cc9kdKvep9ZBUN_be/view?usp=sharing',
+    'https://drive.google.com/file/d/1bs_rlG4-Srfb3dyT4nz2Po-VN3fAp5m2/view?usp=sharing',
   imageUrl: '',
 };
 export const autoTypeData = [
