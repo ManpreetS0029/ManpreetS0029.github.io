@@ -10,14 +10,13 @@ import CallIcon from '@mui/icons-material/Call';
 import PersonalData from '../../Data/PersonalData';
 import { useSelector } from 'react-redux';
 
-const data = [PersonalData.address, PersonalData.email, PersonalData.mobNo];
+const data = [PersonalData.address, PersonalData.mobNo];
 
 const GetInTouch = (props) => {
   const uiColor = useSelector((state) => state.uiColor);
   const nonThemeColor = useSelector((state) => state.nonThemeColor);
   const Icons = [
     <LocationOnIcon fontSize="large" />,
-    <SendIcon fontSize="large" />,
     <CallIcon fontSize="large" />,
   ];
 
@@ -42,6 +41,10 @@ const GetInTouch = (props) => {
           I would love to hear from you, so whether you need a quote, have a
           question or just want to say hello, please feel free to drop me a
           line.
+        </p>
+        <p>
+          Email me at{' '}
+          <span style={{ color: uiColor }}>{PersonalData.email}</span>
         </p>
         <div>{contactDetails}</div>
       </div>
